@@ -1,0 +1,164 @@
+.register{
+    position: relative;
+    height: auto;
+    width: 100%;
+    .register-bg{
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .row{
+      .register-img{
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .regContent{
+        padding-top: 4em;
+        z-index: 3;
+        position: relative;
+        .formReg{
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            max-height: 500px;
+            width: 100%;
+            .formReg-content{
+                @include styleText($fs-1, $fw-6, $color-dark-2);
+                background-color: $color-bgr-white;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 30px 30px -10px $color-dark-2;
+                width: 400px;
+                height: 100%;
+                .title{
+                    z-index: 1;
+                    position: relative;
+                    text-align: center;
+                    h1{
+                        @include styleText($fs-11, $fw-7, $color-dark-2);
+    
+                    }
+                }
+                .bottomSpace{
+                    margin-bottom: 50px;
+                }
+                .reg-form{
+                    display: block;
+                    text-align: left;
+                    padding-inline-start: 30px;
+                    .input-name {
+                        display: flex;
+                        width: 100%;
+                        justify-content: baseline;
+                        padding-bottom: $pd-10;
+                        padding-right: 15px;
+                        .name {
+                          display: flex;        
+                          align-items: center;
+                          border-radius: $radius-2;
+                           padding: 9px 18px;
+                          
+                          margin-right: 20px;
+                          border: 1px solid $color-dark-gray;
+                          input {
+                            border: transparent;
+                            width: 100%;
+                          }
+                          span {
+                            color: $color-pink-1;
+                            padding-right: 6px;
+                          }
+                        }
+                      }
+                      .input-language{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        border-radius: $radius-2;
+                        padding: 8px 16px;
+                        margin-bottom: 20px;
+                        width: 90%;
+                        border: 1px solid $color-dark-gray;
+                        span {
+                          color: $color-pink-1;
+                        }
+                        .select{
+                          width: 100%;
+                          select {
+                            border: transparent;
+                            width: 100%; 
+                          }
+                        }
+                      }
+                      .input-message {
+                        display: flex;
+                        flex-direction: row;
+                        border-radius: $radius-2;
+                        padding: 8px 16px;
+                        width: 90%;
+                        border: 1px solid $color-dark-gray;
+                        span {
+                          padding-top: 5px;
+                          padding-left: 1px;
+                          color: $color-pink-1;
+                        }
+                      
+                        textarea {
+                          border: transparent;
+                          width: 100%;
+                          margin-left: 5px;
+                          &:focus{
+                            background-color: white;
+                            outline: none !important;
+                          }
+                        }
+                      
+                      }
+                      .sendButton{
+                        max-width: 150px;
+                        .btn-pink{
+                          display: flex;
+                          width: 100%;
+                          a{
+                            width: 100%;
+                            border: 1px solid;
+                          }
+         
+                        }
+                      }
+                     
+              }
+            
+            }
+        }
+    }
+}
+@include responsive("small"){
+ 
+  .formReg-content{
+    width: 100%!important;
+    .reg-form{
+      .input-name{
+        padding-right: 40px!important;
+        flex-direction: column;
+        .responsiveInput{
+          height: 15px;
+        }
+        .name{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}

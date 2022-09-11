@@ -1,0 +1,117 @@
+.carousel{
+    width: 100%;
+    padding: 50px 0 40px;
+    position: relative;
+    .bg1 {
+        position: absolute;
+        left: 0;
+        right:0;
+        top: 0;
+        img{
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+    }
+    .bg2{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .container{
+        .content{
+            max-width: 1200px;
+            padding: 16px 0;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+   
+}
+.content-carousel{
+    padding: 17% 0 15% 0 ;
+    .aboutUs{
+        @include styleText($fs-5,$fw-6,$color-pink-1)
+    }
+    .language{
+        @include styleText($fs-6,$fw-7,$color-black)
+    }
+}
+.img-carousel{
+    img{    
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;    
+    }
+}
+
+
+
+
+
+
+
+@include responsive("extra-large") {
+    .about-carousel{
+        padding: 0;
+        .content{
+            padding: 0;
+        }
+    }
+   
+    .content-carousel{
+        padding: 19% 0 25% 0 ;
+        .title-l{
+            font-size: 3.5rem ;
+        }
+        .title-s{
+            font-size: 1.1rem ;
+        }
+    }
+    .img-carousel{
+        padding-top: 4%;
+    }
+} 
+@include responsive("large") {
+    .content-carousel{
+        padding: 12% 0 10%;
+        .title-l{
+            font-size: 3.19rem ;
+        }
+    }
+    .img-carousel{
+        padding-bottom: 10%;
+    }
+
+}
+@include responsive("medium") {
+    .content-carousel{
+        padding: 20% 0;
+        .title-l{
+            font-size: 3.15rem ;
+        }
+    }
+    .img-carousel{
+        padding-bottom: 30%;
+    }
+
+}
+@include responsive("small") {
+    .content-carousel{
+        padding: 30% 0;
+        .title-l{
+            font-size: 3.15rem ;
+        }
+    }
+    .img-carousel{
+        padding-bottom: 50%;
+    }
+}  

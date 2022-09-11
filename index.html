@@ -1,58 +1,386 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabula-SASS</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" id="boldthemes-fonts-css"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic&amp;subset=latin%2Clatin-ext&amp;ver=1.0.0"
+        type="text/css" media="all">
 
-     <!-- GOOGLE FONT -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
-     <!-- BS4 CSS     -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-     <!-- Font Awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-         crossorigin="anonymous" />
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    <header>
-        <nav class="phoneNav container navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#"><img src="./img/crest.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#phoneNavbar"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="fa fa-bars"></i>
-                </span>
-            </button>
+    <!-- HEADER -->
+    <header id="none">
+        <div class="container-fluid" id="navContent">
+            <div class="btLogoArea">
+                <div class="port">
+                    <nav class="tabulaNav container navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#"><img src="./img/crest.png" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="header-info"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i class="fa fa-bars"></i>
+                            </span>
+                        </button>
 
-            <div class="collapse navbar-collapse" id="phoneNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-
-                </ul>
+                        <div class="collapse navbar-collapse" id="header-info">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Courses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Element</a>
+                                </li>
+                                <li class="nav-item" id="phoneNumber">
+                                    <button class="btn-pink btn-header">
+                                        <a class="phone-contact"> <span class="fa-solid fa-phone-flip"></span><span>(+1)555234-8765</span></a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="icon-social">
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                   
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </nav>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
+    <!-- CAROUSEL -->
+    <section class="carousel">
+        <div class="container">    
+                <div class="row">
+                    <div class="content-carousel col- col-md-12 col-sm-6 col-lg-6 col-xl-6">
+                        <h3 class="aboutUs wow animate__animated animate__slideInLeft animate__delay-0.3s">ABOUT US</h3>
+                        <h1 class="language wow animate__animated animate__slideInLeft animate__delay-0.5s">The language teaching experts</h1>
+                    </div>
+                    <div class="img-carousel col- col-md-12 col-sm-6 col-lg-6  col-xl-6">
+                        <img class="animate__animated animate__fadeIn animate__delay-0.9s" src="./img/hero_team.png"alt="">
+                    </div>
+                </div>
+        </div>
+        <div class="bg1">
+            <img src="./img/yellow_top_wave_01.png" alt="">
+        </div>
+        <div class="bg2">
+            <img src="./img/Violet_top_left_wave.png" alt="">
+        </div>
+    </section>
+    <!-- EMPLOYEE -->
+    <section class="employee">
+        <div class="employee-cover">
+            <div class="employee-content container">
+                <div class="row">
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-md-6 col-sm-6">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">Italian</p>
+                                        <p class="name"><h2>July Roberts</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">Italian</p>
+                                        <p class="name"><h2>July Roberts</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">FRENCH</p>
+                                        <p class="name"><h2>Jon Stone</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">JAPANESE</p>
+                                        <p class="name"><h2>Emma Stone</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">CHINESE</p>
+                                        <p class="name"><h2>Mark Lee</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">RUSSIAN</p>
+                                        <p class="name"><h2>John Doe</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_7.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">SWEDEN</p>
+                                        <p class="name"><h2>Jane Smith</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empInfo col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card cardEmployee">
+                            <img src="./img/teacher_8.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="country">SPANISH</p>
+                                        <p class="name"><h2>Hanna Alverez</h2></p>
+                                        <p class="info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-bg">
+                        <img src="./img/Wave_White_bottom_right_shape_01.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    <!-- REGISTER -->
+    <section class="register">
+        <div class="regContent container">
+            <div class="row">
+                <div class="register-img col- col-md-12 col-sm-6 col-lg-6 col-xl-6 wow animate__animated animate__slideInLeft animate__delay-0.7s " >
+                    <img src="./img/conatct_inner.png" alt="">
+                </div>
+                <div class="formReg col- col-md-12 col-sm-6 col-lg-6 col-xl-6 woww animate__animated animate__fadeIn animate__delay-1s" >
+                    <div class="formReg-content">
+                        <span class="title">
+                            <h1>Find your course</h1>
+                        </span>
+                        <div class="bottomSpace"></div>
+                        <div class="reg-form">
+                            
+                                <div class="input-name">
+                                    <div class="name" >
+                                        <span class="fa-solid fa-user"></span>
+                                        <span>
+                                            <input type="text" placeholder="Name">
+                                        </span>
+                                    </div>
+                                    <div class="responsiveInput"></div>
+                                    <div class="name" >
+                                        <span class="fa-solid fa-envelope"></span>
+                                        <span>
+                                            <input type="text" placeholder="E-mail">
+                                        </span>
+                                    </div>
+                                 
+                                </div>
+                           
+                            
+                            <div class="input-language">
+                                    <span class="fa-solid fa-graduation-cap"></span>
+                                    <span class="select">
+                                        <select name="" id="">
+                                            <option value="">English</option>
+                                            <option value="">French</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">German</option>
+                                        </select>
+                                    </span>                         
+                            </div>
+                            <div class="input-message">
+                                <span class="fa-solid fa-message"></span>
+                                <textarea  rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="bottomSpace"></div>
+                            <div class="sendButton">
+                                <button class="btn-pink">
+                                    <a href="#"><span>SEND</span></a> 
+                                 </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="register-bg">
+            <img src="./img/accent_bottom_wave_01.png" alt="">
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 col-lg-3 col-sm-6 wow animate__animated animate__fadeIn animate__delay-0s">
+                    <div class="columnContent">
+                        <div class="columnInner">
+                            <div class="header">
+                                <span><h5>Contact Us</h5></span>
+                            </div>
+                            <div class="spaceColumn"></div>
+                            <div class="footerContact">
+                                <div>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Franklin St, Greenpoint Ave</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    <span>+2342 5446 67</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Monday - Friday: 8 AM - 5 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="footerIcon">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3 col-sm-6 wow animate__animated animate__fadeIn animate__delay-1s">
+                    <div class="columnContent">
+                        <div class="columnInner">
+                            <div class="header">
+                                <span><h5>Quick Links</h5></span>
+                            </div>
+                            <div class="spaceColumn"></div>
+                            <div class="footerLink">
+                                <a href="#">Home</a>
+                                <a href="#">Courses</a>
+                                <a href="#">Schedule</a>
+                                <a href="#">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3 col-sm-6 wow animate__animated animate__fadeIn animate__delay-2s">
+                    <div class="columnContent">
+                        <div class="columnInner">
+                            <div class="header">
+                                <span><h5>About</h5></span>
+                            </div>
+                            <div class="spaceColumn"></div>
+                            <div class="footerLink">
+                                <a href="#">About Us</a>
+                                <a href="#">Events</a>
+                                <a href="#">Get Quote</a>
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-lg-3 col-sm-6 wow animate__animated animate__fadeIn animate__delay-3s" >
+                    <div class="columnContent">
+                        <div class="columnInner">
+                            <div class="header">
+                                <span><h5>Newsletter</h5></span>
+                            </div>
+                            <div class="spaceColumn"></div>
+                            <div class="footerNews">
+                                <div>
+                                    <input type="text" placeholder="Your email">
+                                </div>
+                                <div class="spaceColumn"></div>
+                                <button class="sub">
+                                    <a href="#"><span>SUBSCRIBE</span></a>  
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -64,15 +392,23 @@
 
 
 
-     <!-- Thư viện hỗ trợ jquery -->
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-     crossorigin="anonymous"></script>
- <!-- BS4 JS -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-     crossorigin="anonymous"></script>
+    <!-- Thư viện hỗ trợ jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
- <script src="./js/main.js"></script>
+    <script src="./js/main.js"></script>
+
+
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

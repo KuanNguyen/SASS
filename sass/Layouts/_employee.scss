@@ -1,0 +1,153 @@
+
+.employee{
+  @include styleText($fs-10,$fw-4,$color-black);
+    position: relative;
+    width: 100%;
+   
+    .employee-bg{
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      img{
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: $color-orchid;
+      }
+    }
+    .container{
+      
+      padding-top: 0;
+      
+      .row{
+        max-width: 1200px;
+        
+        .empInfo{
+          padding-top: 30px;
+          
+          padding-bottom: 30px;
+          .card{
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.5s;
+            border: transparent;
+            &:hover img {
+            transition: all 1s;
+            transform: scale3d(1.07, 1.07, 1.07);
+            }
+            img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            }
+            &:hover {
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 24px 18px;
+            }
+          }
+          .card-body {
+            text-align: center;
+            padding: 32px 0; 
+            .country {
+              @include styleText($fs-0, $fw-7, $color-pink-1);
+              letter-spacing: 0.03rem;
+                    padding: 2px 0;
+                  }
+                  h4 {
+                    @include styleText($fs-3, $fw-7, $color-black);
+                    padding: 2px 0;
+                  }
+                  p {
+                    @include styleText($fs-1, $fw-5, $color-black);
+                    padding: 6px 24px;
+                  }
+                }
+        }
+      }
+    }
+
+    
+}
+
+@include responsive("extra-large") {
+  .products {
+    .img-products {
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: $color-orchid;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 530px;
+        background-color: $color-orchid;
+      }
+    }
+  }
+}
+@include responsive("large") {
+    .employee {
+        .employee-bg {
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: $color-orchid;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 200px;
+            background-color: $color-orchid;
+          }
+        }
+      }
+
+
+}
+@include responsive("medium") {
+    .employee {
+        .employee-bg {
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: $color-orchid;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1420px;
+            background-color: $color-orchid;
+          }
+        }
+      }
+}
+@include responsive("small") {
+    .employee {
+        .employee-bg {
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: $color-orchid;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height:3220px;
+            background-color: $color-orchid;
+          }
+        }
+        .row{
+          .empInfo{
+            max-width: 230px;
+          }
+        }
+      }
+}
